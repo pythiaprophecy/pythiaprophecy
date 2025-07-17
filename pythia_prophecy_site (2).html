@@ -1,4 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PYTHIA PROPHECY</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #0f172a;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 60px;
+    }
+    h1 {
+      margin: 10px 0 0;
+      font-size: 28px;
+    }
+    .telegram-btn {
+      margin: 20px;
+      text-align: center;
+    }
+    .telegram-btn a {
+      background: #229ED9;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .vip-section {
+      background: #334155;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .vip-section h2 {
+      margin-top: 0;
+      color: #facc15;
+    }
+    .prediction-table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    .prediction-table th, .prediction-table td {
+      border: 1px solid #475569;
+      padding: 10px;
+      text-align: center;
+    }
+    .language-switch {
+      text-align: center;
+      margin: 20px;
+    }
+    .language-switch button {
+      padding: 8px 16px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #4ade80;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 
+  <header>
+    <img src="https://i.ibb.co/pQTwTyC/logo.png" alt="PYTHIA LOGO">
+    <h1>PYTHIA PROPHECY</h1>
+    <p>Your Trusted Football Betting Partner</p>
+  </header>
+
+  <div class="telegram-btn">
+    <a href="https://t.me/+luDA02zm1aNiYmU9" target="_blank">Join Telegram Channel</a>
+  </div>
+
+  <div class="vip-section">
+    <h2>🏆 VIP PACKAGE</h2>
+    <p>Get exclusive daily tips, premium predictions & insider info.</p>
+    <ul>
+      <li>✅ Accuracy: 90%</li>
+      <li>✅ Daily Betting Ticket</li>
+      <li>✅ Direct Access to Expert Tips</li>
+    </ul>
+  </div>
+
+  <table class="prediction-table">
+    <thead>
+      <tr>
+        <th>Match</th>
+        <th>Prediction</th>
+        <th>Odds</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Japan vs Korea</td>
+        <td>Over 2.5 Goals</td>
+        <td>1.90</td>
+      </tr>
+      <tr>
+        <td>Argentina vs Brazil</td>
+        <td>Argentina Win</td>
+        <td>2.30</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="language-switch">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('bn')">বাংলা</button>
+  </div>
+
+  <script>
+    const data = {
+      en: {
+        vipTitle: "🏆 VIP PACKAGE",
+        vipText: "Get exclusive daily tips, premium predictions & insider info.",
+        table: [
+          ["Japan vs Korea", "Over 2.5 Goals", "1.90"],
+          ["Argentina vs Brazil", "Argentina Win", "2.30"]
+        ]
+      },
+      bn: {
+        vipTitle: "🏆 ভিআইপি প্যাকেজ",
+        vipText: "দৈনিক প্রিমিয়াম টিপস, এক্সক্লুসিভ প্রেডিকশন এবং ইনসাইডার তথ্য পান।",
+        table: [
+          ["জাপান বনাম কোরিয়া", "২.৫ এর বেশি গোল", "১.৯০"],
+          ["আর্জেন্টিনা বনাম ব্রাজিল", "আর্জেন্টিনা জিতবে", "২.৩০"]
+        ]
+      }
+    };
+
+    function switchLang(lang) {
+      const vip = document.querySelector(".vip-section");
+      const table = document.querySelector(".prediction-table tbody");
+      vip.querySelector("h2").innerText = data[lang].vipTitle;
+      vip.querySelector("p").innerText = data[lang].vipText;
+      table.innerHTML = "";
+      data[lang].table.forEach(row => {
+        const tr = document.createElement("tr");
+        row.forEach(cell => {
+          const td = document.createElement("td");
+          td.innerText = cell;
+          tr.appendChild(td);
+        });
+        table.appendChild(tr);
+      });
+    }
+  </script>
+
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
